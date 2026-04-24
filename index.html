@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VaultWise Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <aside class="sidebar">
+    <h1 class="logo">Vault<span>Wise</span></h1>
+
+    <nav>
+      <a class="nav-link active" data-page="home"><i data-lucide="home"></i> Home</a>
+      <a class="nav-link" data-page="save"><i data-lucide="badge-dollar-sign"></i> Save</a>
+      <a class="nav-link" data-page="invest"><i data-lucide="bar-chart-3"></i> Invest</a>
+      <a class="nav-link" data-page="profile"><i data-lucide="user"></i> Profile</a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+  <div class="mobile-profile">
+    <img src="https://i.pravatar.cc/40?img=12" alt="profile" />
+
+    <div>
+      <p>@Jemella</p>
+      <button id="connectWalletBtn">Connect Wallet</button>
+    </div>
+  </div>
+
+  <button id="connectWalletBtnDesktop">Connect Wallet</button>
+
+  <div class="top-icons">
+    <i data-lucide="search"></i>
+
+    <div class="bell">
+      <i data-lucide="bell"></i>
+      <span></span>
+    </div>
+
+    <p class="desktop-user">@Jemella</p>
+    <img class="desktop-avatar" src="https://i.pravatar.cc/40?img=12" alt="profile" />
+  </div>
+</header>
+
+    <!-- HOME PAGE -->
+    <section class="content page-section" id="homePage">
+      <div class="left-area">
+
+        <section class="balance-card">
+          <div class="balance-top">
+            <div>
+              <p>
+                Total Balance
+                <button id="toggleBalance" class="eye-btn" type="button">
+                  <i data-lucide="eye"></i>
+                </button>
+              </p>
+
+              <h2 id="balanceAmount" data-real="$1,320.70">$1,320.70</h2>
+              <h4 id="balanceChange" data-real="+$210.34 (4.56%)">
+                +$210.34 (4.56%)
+              </h4>
+            </div>
+
+            <button class="currency">
+              USD <i data-lucide="chevron-down"></i>
+            </button>
+          </div>
+
+          <div class="actions">
+            <div class="action-box">
+              <span><i data-lucide="arrow-up"></i></span>
+              <p>Send</p>
+            </div>
+
+            <div class="action-box">
+              <span><i data-lucide="arrow-down"></i></span>
+              <p>Receive</p>
+            </div>
+
+            <div class="action-box">
+              <span><i data-lucide="arrow-left-right"></i></span>
+              <p>Swap</p>
+            </div>
+
+            <div class="action-box">
+              <span><i data-lucide="history"></i></span>
+              <p>History</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="vault-section">
+          <div class="section-title">
+            <h2>My Vaults</h2>
+            <a>View all</a>
+          </div>
+
+          <div class="vault-grid">
+
+            <div class="vault-card">
+              <div class="vault-head">
+                <div class="vault-icon"><i data-lucide="badge-dollar-sign"></i></div>
+                <div>
+                  <h3>Land <span>Active</span></h3>
+                  <p>Main Vault • 6 months left</p>
+                </div>
+              </div>
+
+              <div class="vault-info">
+                <div>
+                  <small>Savings Goal</small>
+                  <h4>$1,000.00</h4>
+                </div>
+
+                <div>
+                  <small>Current Amount</small>
+                  <h4 class="blue">$400.20</h4>
+                </div>
+              </div>
+
+              <div class="progress-row">
+                <small>Progress</small>
+                <small>40.02%</small>
+              </div>
+
+              <div class="progress"><span></span></div>
+              <small>$599.80 to go</small>
+
+              <button class="details-btn">
+                View vault details <i data-lucide="chevron-right"></i>
+              </button>
+            </div>
+
+            <div class="vault-card">
+              <div class="vault-head">
+                <div class="vault-icon"><i data-lucide="badge-dollar-sign"></i></div>
+                <div>
+                  <h3>Building <span>Active</span></h3>
+                  <p>Main Vault • 6 months left</p>
+                </div>
+              </div>
+
+              <div class="vault-info">
+                <div>
+                  <small>Savings Goal</small>
+                  <h4>$1,000.00</h4>
+                </div>
+
+                <div>
+                  <small>Current Amount</small>
+                  <h4 class="blue">$400.20</h4>
+                </div>
+              </div>
+
+              <div class="progress-row">
+                <small>Progress</small>
+                <small>40.02%</small>
+              </div>
+
+              <div class="progress"><span></span></div>
+              <small>$599.80 to go</small>
+
+              <button class="details-btn">
+                View vault details <i data-lucide="chevron-right"></i>
+              </button>
+            </div>
+
+            <div class="vault-card">
+              <div class="vault-head">
+                <div class="vault-icon"><i data-lucide="badge-dollar-sign"></i></div>
+                <div>
+                  <h3>Building <span>Active</span></h3>
+                  <p>Main Vault • 6 months left</p>
+                </div>
+              </div>
+
+              <div class="vault-info">
+                <div>
+                  <small>Savings Goal</small>
+                  <h4>$1,000.00</h4>
+                </div>
+
+                <div>
+                  <small>Current Amount</small>
+                  <h4 class="blue">$400.20</h4>
+                </div>
+              </div>
+
+              <div class="progress-row">
+                <small>Progress</small>
+                <small>40.02%</small>
+              </div>
+
+              <div class="progress"><span></span></div>
+              <small>$599.80 to go</small>
+
+              <button class="details-btn">
+                View vault details <i data-lucide="chevron-right"></i>
+              </button>
+            </div>
+
+            <div class="vault-card">
+              <div class="vault-head">
+                <div class="vault-icon"><i data-lucide="badge-dollar-sign"></i></div>
+                <div>
+                  <h3>Land <span>Active</span></h3>
+                  <p>Main Vault • 6 months left</p>
+                </div>
+              </div>
+
+              <div class="vault-info">
+                <div>
+                  <small>Savings Goal</small>
+                  <h4>$1,000.00</h4>
+                </div>
+
+                <div>
+                  <small>Current Amount</small>
+                  <h4 class="blue">$400.20</h4>
+                </div>
+              </div>
+
+              <div class="progress-row">
+                <small>Progress</small>
+                <small>40.02%</small>
+              </div>
+
+              <div class="progress"><span></span></div>
+              <small>$599.80 to go</small>
+
+              <button class="details-btn">
+                View vault details <i data-lucide="chevron-right"></i>
+              </button>
+            </div>
+
+          </div>
+        </section>
+      </div>
+
+      <aside class="assets-card">
+        <div class="section-title">
+          <h2>Crypto Assets</h2>
+          <a>View all</a>
+        </div>
+
+        <div class="asset">
+          <div class="coin usdt">₮</div>
+          <div>
+            <h3>USDT</h3>
+            <p>$1.00 <span>+4.56%</span></p>
+          </div>
+          <div class="asset-price">
+            <h4>$1,320.7043</h4>
+            <p>$1,320.70</p>
+          </div>
+        </div>
+
+        <div class="asset">
+          <div class="coin eth">◆</div>
+          <div>
+            <h3>ETH</h3>
+            <p>$1.00 <span>+4.56%</span></p>
+          </div>
+          <div class="asset-price">
+            <h4>$1,320.7043</h4>
+            <p>$1,320.70</p>
+          </div>
+        </div>
+
+        <div class="asset">
+          <div class="coin atom">✺</div>
+          <div>
+            <h3>ATOM</h3>
+            <p>$1.00 <span>+4.56%</span></p>
+          </div>
+          <div class="asset-price">
+            <h4>$1,320.7043</h4>
+            <p>$1,320.70</p>
+          </div>
+        </div>
+
+        <div class="asset">
+          <div class="coin ton">▽</div>
+          <div>
+            <h3>TON</h3>
+            <p>$1.00 <span>+4.56%</span></p>
+          </div>
+          <div class="asset-price">
+            <h4>$1,320.7043</h4>
+            <p>$1,320.70</p>
+          </div>
+        </div>
+
+        <div class="asset">
+          <div class="coin axl">✖</div>
+          <div>
+            <h3>AXL</h3>
+            <p>$1.00 <span>+4.56%</span></p>
+          </div>
+          <div class="asset-price">
+            <h4>$1,320.7043</h4>
+            <p>$1,320.70</p>
+          </div>
+        </div>
+
+        <div class="asset">
+          <div class="coin btc">₿</div>
+          <div>
+            <h3>BTC</h3>
+            <p>$1.00 <span>+4.56%</span></p>
+          </div>
+          <div class="asset-price">
+            <h4>$1,320.7043</h4>
+            <p>$1,320.70</p>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- SAVE PAGE -->
+    <section class="page hidden" id="savePage">
+      <div class="page-header">
+        <h2>Save</h2>
+        <p>Create savings vaults and track your goals.</p>
+      </div>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon"><i data-lucide="wallet"></i></div>
+          <h3>Flexible Savings</h3>
+          <p>Save anytime and withdraw whenever you need access.</p>
+          <button>Create Vault</button>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i data-lucide="lock-keyhole"></i></div>
+          <h3>Locked Savings</h3>
+          <p>Lock funds for a fixed period and stay disciplined.</p>
+          <button>Start Saving</button>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i data-lucide="target"></i></div>
+          <h3>Target Savings</h3>
+          <p>Set a goal and watch your progress grow.</p>
+          <button>Set Goal</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- INVEST PAGE -->
+    <section class="page hidden" id="investPage">
+      <div class="page-header">
+        <h2>Invest</h2>
+        <p>Explore simple investment opportunities.</p>
+      </div>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon"><i data-lucide="coins"></i></div>
+          <h3>Crypto Portfolio</h3>
+          <p>Track your crypto assets in one clean dashboard.</p>
+          <button>View Assets</button>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i data-lucide="shield-check"></i></div>
+          <h3>Stable Yield</h3>
+          <p>Earn from low-risk stablecoin opportunities.</p>
+          <button>Explore</button>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i data-lucide="line-chart"></i></div>
+          <h3>Growth Plan</h3>
+          <p>Build long-term wealth with structured investing.</p>
+          <button>Invest Now</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROFILE PAGE -->
+    <section class="page hidden" id="profilePage">
+      <div class="page-header">
+        <h2>Profile</h2>
+        <p>Manage your account, wallet, and preferences.</p>
+      </div>
+
+      <div class="profile-card">
+        <img src="https://i.pravatar.cc/90?img=12" alt="profile" />
+        <h3>@Jemella</h3>
+        <p>VaultWise User</p>
+
+        <div class="profile-info">
+          <div>
+            <span>Email</span>
+            <strong>jemella@example.com</strong>
+          </div>
+
+          <div>
+            <span>Wallet</span>
+            <strong id="profileWalletText">Not connected</strong>
+          </div>
+
+          <div>
+            <span>Status</span>
+            <strong class="verified">Verified</strong>
+          </div>
+        </div>
+
+        <button>Edit Profile</button>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+  <nav class="mobile-bottom-nav">
+  <a class="nav-link active" data-page="home">
+    <i data-lucide="home"></i>
+    <span>Home</span>
+  </a>
+
+  <a class="nav-link" data-page="save">
+    <i data-lucide="badge-dollar-sign"></i>
+    <span>Save</span>
+  </a>
+
+  <a class="nav-link" data-page="invest">
+    <i data-lucide="bar-chart-3"></i>
+    <span>Invest</span>
+  </a>
+
+  <a class="nav-link" data-page="profile">
+    <i data-lucide="user"></i>
+    <span>Profile</span>
+  </a>
+</nav>
+</body>
+</html>
