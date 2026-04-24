@@ -9,460 +9,449 @@
 </head>
 <body>
 
-  <aside class="sidebar">
-    <h1 class="logo">Vault<span>Wise</span></h1>
-
-    <nav>
-      <a class="nav-link active" data-page="home"><i data-lucide="home"></i> Home</a>
-      <a class="nav-link" data-page="save"><i data-lucide="badge-dollar-sign"></i> Save</a>
-      <a class="nav-link" data-page="invest"><i data-lucide="bar-chart-3"></i> Invest</a>
-      <a class="nav-link" data-page="profile"><i data-lucide="user"></i> Profile</a>
-    </nav>
-  </aside>
-
-  <main class="main">
-    <header class="topbar">
-  <div class="mobile-profile">
-    <img src="https://i.pravatar.cc/40?img=12" alt="profile" />
-
-    <div>
-      <p>@Jemella</p>
-      <button id="connectWalletBtn">Connect Wallet</button>
+  <div class="landing" id="landingPage">
+    <div class="landing-content">
+      <h1>Vault<span>Wise</span></h1>
+      <p>Save, invest, and grow your money on-chain.</p>
+      <button id="startAppBtn">Start Saving</button>
     </div>
   </div>
 
-  <button id="connectWalletBtnDesktop">Connect Wallet</button>
+  <div id="appContainer" class="hidden">
+    <aside class="sidebar">
+      <h1 class="logo">Vault<span>Wise</span></h1>
 
-  <div class="wallet-box hidden" id="walletBox">
-    <button class="wallet-display" id="walletDisplayBtn">
-      <span class="green-dot"></span>
-      <span id="walletShortText">Connected</span>
-      <i data-lucide="chevron-down"></i>
-    </button>
+      <nav>
+        <a class="nav-link active" data-page="home"><i data-lucide="home"></i> Home</a>
+        <a class="nav-link" data-page="save"><i data-lucide="badge-dollar-sign"></i> Save</a>
+        <a class="nav-link" data-page="invest"><i data-lucide="bar-chart-3"></i> Invest</a>
+        <a class="nav-link" data-page="profile"><i data-lucide="user"></i> Profile</a>
+      </nav>
+    </aside>
 
-    <div class="wallet-dropdown hidden" id="walletDropdown">
-      <p class="connected-badge">Connected</p>
+    <main class="main">
+      <header class="topbar">
+        <div class="mobile-profile">
+          <img class="user-avatar" src="https://ui-avatars.com/api/?name=User&background=ffffff&color=000000" alt="profile" />
+          <div>
+            <p class="mobile-username">@User</p>
+            <button id="connectWalletBtn">Connect Wallet</button>
+          </div>
+        </div>
 
-      <button id="copyWalletBtn">
-        <i data-lucide="copy"></i>
-        Copy Address
-      </button>
+        <button id="connectWalletBtnDesktop">Connect Wallet</button>
 
-      <button id="disconnectWalletBtn" class="danger">
-        <i data-lucide="log-out"></i>
-        Disconnect
-      </button>
-    </div>
-  </div>
+        <div class="wallet-box hidden" id="walletBox">
+          <button class="wallet-display" id="walletDisplayBtn">
+            <span class="green-dot"></span>
+            <span id="walletShortText">Connected</span>
+            <i data-lucide="chevron-down"></i>
+          </button>
 
-  <div class="top-icons">
-    <i data-lucide="search"></i>
+          <div class="wallet-dropdown hidden" id="walletDropdown">
+            <p class="connected-badge">Connected</p>
 
-    <div class="bell">
-      <i data-lucide="bell"></i>
-      <span></span>
-    </div>
+            <button id="copyWalletBtn">
+              <i data-lucide="copy"></i>
+              Copy Address
+            </button>
 
-    <p class="desktop-user">@Jemella</p>
-    <img class="desktop-avatar" src="https://i.pravatar.cc/40?img=12" alt="profile" />
-  </div>
-</header>
-
-    <!-- HOME PAGE -->
-    <section class="content page-section" id="homePage">
-      <div class="left-area">
-
-        <section class="balance-card">
-          <div class="balance-top">
-            <div>
-              <p>
-                Total Balance
-                <button id="toggleBalance" class="eye-btn" type="button">
-                  <i data-lucide="eye"></i>
-                </button>
-              </p>
-
-              <h2 id="balanceAmount" data-real="$1,320.70">$1,320.70</h2>
-              <h4 id="balanceChange" data-real="+$210.34 (4.56%)">
-                +$210.34 (4.56%)
-              </h4>
-            </div>
-
-            <button class="currency">
-              USD <i data-lucide="chevron-down"></i>
+            <button id="disconnectWalletBtn" class="danger">
+              <i data-lucide="log-out"></i>
+              Disconnect
             </button>
           </div>
+        </div>
 
-          <div class="actions">
-            <div class="action-box">
-              <span><i data-lucide="arrow-up"></i></span>
-              <p>Send</p>
-            </div>
+        <div class="top-icons">
+          <i data-lucide="search"></i>
 
-            <div class="action-box">
-              <span><i data-lucide="arrow-down"></i></span>
-              <p>Receive</p>
-            </div>
-
-            <div class="action-box">
-              <span><i data-lucide="arrow-left-right"></i></span>
-              <p>Swap</p>
-            </div>
-
-            <div class="action-box">
-              <span><i data-lucide="history"></i></span>
-              <p>History</p>
-            </div>
+          <div class="bell">
+            <i data-lucide="bell"></i>
+            <span></span>
           </div>
-        </section>
 
-        <section class="vault-section">
+          <p class="desktop-user">@User</p>
+          <img class="desktop-avatar user-avatar" src="https://ui-avatars.com/api/?name=User&background=ffffff&color=000000" alt="profile" />
+        </div>
+      </header>
+
+      <section class="content page-section" id="homePage">
+        <div class="left-area">
+          <section class="balance-card">
+            <div class="balance-top">
+              <div>
+                <p>
+                  Wallet Balance
+                  <button id="toggleBalance" class="eye-btn" type="button">
+                    <i data-lucide="eye"></i>
+                  </button>
+                </p>
+
+                <h2 id="balanceAmount" data-real="0.0000 POL">0.0000 POL</h2>
+                <h4 id="balanceChange" data-real="Connect wallet to view balance">
+                  Connect wallet to view balance
+                </h4>
+              </div>
+
+              <button class="currency">
+                POL <i data-lucide="chevron-down"></i>
+              </button>
+            </div>
+
+            <div class="actions">
+              <button class="action-box" id="sendActionBtn">
+                <span><i data-lucide="arrow-up"></i></span>
+                <p>Send</p>
+              </button>
+
+              <button class="action-box" id="receiveActionBtn">
+                <span><i data-lucide="arrow-down"></i></span>
+                <p>Receive</p>
+              </button>
+
+              <button class="action-box" id="swapActionBtn">
+                <span><i data-lucide="arrow-left-right"></i></span>
+                <p>Swap</p>
+              </button>
+
+              <button class="action-box" id="historyActionBtn">
+                <span><i data-lucide="history"></i></span>
+                <p>History</p>
+              </button>
+            </div>
+          </section>
+
+          <section class="vault-section">
+            <div class="section-title">
+              <h2>My Vaults</h2>
+              <a>View all</a>
+            </div>
+
+            <div class="vault-grid" id="vaultGrid"></div>
+          </section>
+        </div>
+
+        <aside class="assets-card">
           <div class="section-title">
-            <h2>My Vaults</h2>
+            <h2>Crypto Assets</h2>
             <a>View all</a>
           </div>
 
-          <div class="vault-grid">
-
-            <div class="vault-card">
-              <div class="vault-head">
-                <div class="vault-icon"><i data-lucide="badge-dollar-sign"></i></div>
-                <div>
-                  <h3>Land <span>Active</span></h3>
-                  <p>Main Vault • 6 months left</p>
-                </div>
-              </div>
-
-              <div class="vault-info">
-                <div>
-                  <small>Savings Goal</small>
-                  <h4>$1,000.00</h4>
-                </div>
-
-                <div>
-                  <small>Current Amount</small>
-                  <h4 class="blue">$400.20</h4>
-                </div>
-              </div>
-
-              <div class="progress-row">
-                <small>Progress</small>
-                <small>40.02%</small>
-              </div>
-
-              <div class="progress"><span></span></div>
-              <small>$599.80 to go</small>
-
-              <button class="details-btn">
-                View vault details <i data-lucide="chevron-right"></i>
-              </button>
+          <div class="asset" data-coin="tether">
+            <div class="coin usdt">₮</div>
+            <div>
+              <h3>USDT</h3>
+              <p><span class="coin-price">Loading...</span> <span class="coin-change"></span></p>
             </div>
-
-            <div class="vault-card">
-              <div class="vault-head">
-                <div class="vault-icon"><i data-lucide="badge-dollar-sign"></i></div>
-                <div>
-                  <h3>Building <span>Active</span></h3>
-                  <p>Main Vault • 6 months left</p>
-                </div>
-              </div>
-
-              <div class="vault-info">
-                <div>
-                  <small>Savings Goal</small>
-                  <h4>$1,000.00</h4>
-                </div>
-
-                <div>
-                  <small>Current Amount</small>
-                  <h4 class="blue">$400.20</h4>
-                </div>
-              </div>
-
-              <div class="progress-row">
-                <small>Progress</small>
-                <small>40.02%</small>
-              </div>
-
-              <div class="progress"><span></span></div>
-              <small>$599.80 to go</small>
-
-              <button class="details-btn">
-                View vault details <i data-lucide="chevron-right"></i>
-              </button>
+            <div class="asset-price">
+              <h4 class="coin-balance">$1,320.7043</h4>
+              <p class="coin-value">$1,320.70</p>
             </div>
-
-            <div class="vault-card">
-              <div class="vault-head">
-                <div class="vault-icon"><i data-lucide="badge-dollar-sign"></i></div>
-                <div>
-                  <h3>Building <span>Active</span></h3>
-                  <p>Main Vault • 6 months left</p>
-                </div>
-              </div>
-
-              <div class="vault-info">
-                <div>
-                  <small>Savings Goal</small>
-                  <h4>$1,000.00</h4>
-                </div>
-
-                <div>
-                  <small>Current Amount</small>
-                  <h4 class="blue">$400.20</h4>
-                </div>
-              </div>
-
-              <div class="progress-row">
-                <small>Progress</small>
-                <small>40.02%</small>
-              </div>
-
-              <div class="progress"><span></span></div>
-              <small>$599.80 to go</small>
-
-              <button class="details-btn">
-                View vault details <i data-lucide="chevron-right"></i>
-              </button>
-            </div>
-
-            <div class="vault-card">
-              <div class="vault-head">
-                <div class="vault-icon"><i data-lucide="badge-dollar-sign"></i></div>
-                <div>
-                  <h3>Land <span>Active</span></h3>
-                  <p>Main Vault • 6 months left</p>
-                </div>
-              </div>
-
-              <div class="vault-info">
-                <div>
-                  <small>Savings Goal</small>
-                  <h4>$1,000.00</h4>
-                </div>
-
-                <div>
-                  <small>Current Amount</small>
-                  <h4 class="blue">$400.20</h4>
-                </div>
-              </div>
-
-              <div class="progress-row">
-                <small>Progress</small>
-                <small>40.02%</small>
-              </div>
-
-              <div class="progress"><span></span></div>
-              <small>$599.80 to go</small>
-
-              <button class="details-btn">
-                View vault details <i data-lucide="chevron-right"></i>
-              </button>
-            </div>
-
-          </div>
-        </section>
-      </div>
-
-      <aside class="assets-card">
-  <div class="section-title">
-    <h2>Crypto Assets</h2>
-    <a>View all</a>
-  </div>
-
-  <div class="asset" data-coin="tether">
-    <div class="coin usdt">₮</div>
-    <div>
-      <h3>USDT</h3>
-      <p><span class="coin-price">Loading...</span> <span class="coin-change"></span></p>
-    </div>
-    <div class="asset-price">
-      <h4 class="coin-balance">$1,320.7043</h4>
-      <p class="coin-value">$1,320.70</p>
-    </div>
-  </div>
-
-  <div class="asset" data-coin="ethereum">
-    <div class="coin eth">◆</div>
-    <div>
-      <h3>ETH</h3>
-      <p><span class="coin-price">Loading...</span> <span class="coin-change"></span></p>
-    </div>
-    <div class="asset-price">
-      <h4 class="coin-balance">0.50 ETH</h4>
-      <p class="coin-value">Loading...</p>
-    </div>
-  </div>
-
-  <div class="asset" data-coin="cosmos">
-    <div class="coin atom">✺</div>
-    <div>
-      <h3>ATOM</h3>
-      <p><span class="coin-price">Loading...</span> <span class="coin-change"></span></p>
-    </div>
-    <div class="asset-price">
-      <h4 class="coin-balance">20 ATOM</h4>
-      <p class="coin-value">Loading...</p>
-    </div>
-  </div>
-
-  <div class="asset" data-coin="the-open-network">
-    <div class="coin ton">▽</div>
-    <div>
-      <h3>TON</h3>
-      <p><span class="coin-price">Loading...</span> <span class="coin-change"></span></p>
-    </div>
-    <div class="asset-price">
-      <h4 class="coin-balance">40 TON</h4>
-      <p class="coin-value">Loading...</p>
-    </div>
-  </div>
-
-  <div class="asset" data-coin="axelar">
-    <div class="coin axl">✖</div>
-    <div>
-      <h3>AXL</h3>
-      <p><span class="coin-price">Loading...</span> <span class="coin-change"></span></p>
-    </div>
-    <div class="asset-price">
-      <h4 class="coin-balance">100 AXL</h4>
-      <p class="coin-value">Loading...</p>
-    </div>
-  </div>
-
-  <div class="asset" data-coin="bitcoin">
-    <div class="coin btc">₿</div>
-    <div>
-      <h3>BTC</h3>
-      <p><span class="coin-price">Loading...</span> <span class="coin-change"></span></p>
-    </div>
-    <div class="asset-price">
-      <h4 class="coin-balance">0.02 BTC</h4>
-      <p class="coin-value">Loading...</p>
-    </div>
-  </div>
-</aside>
-    </section>
-
-    <!-- SAVE PAGE -->
-    <section class="page hidden" id="savePage">
-      <div class="page-header">
-        <h2>Save</h2>
-        <p>Create savings vaults and track your goals.</p>
-      </div>
-
-      <div class="feature-grid">
-        <div class="feature-card">
-          <div class="feature-icon"><i data-lucide="wallet"></i></div>
-          <h3>Flexible Savings</h3>
-          <p>Save anytime and withdraw whenever you need access.</p>
-          <button>Create Vault</button>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon"><i data-lucide="lock-keyhole"></i></div>
-          <h3>Locked Savings</h3>
-          <p>Lock funds for a fixed period and stay disciplined.</p>
-          <button>Start Saving</button>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon"><i data-lucide="target"></i></div>
-          <h3>Target Savings</h3>
-          <p>Set a goal and watch your progress grow.</p>
-          <button>Set Goal</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- INVEST PAGE -->
-    <section class="page hidden" id="investPage">
-      <div class="page-header">
-        <h2>Invest</h2>
-        <p>Explore simple investment opportunities.</p>
-      </div>
-
-      <div class="feature-grid">
-        <div class="feature-card">
-          <div class="feature-icon"><i data-lucide="coins"></i></div>
-          <h3>Crypto Portfolio</h3>
-          <p>Track your crypto assets in one clean dashboard.</p>
-          <button>View Assets</button>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon"><i data-lucide="shield-check"></i></div>
-          <h3>Stable Yield</h3>
-          <p>Earn from low-risk stablecoin opportunities.</p>
-          <button>Explore</button>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon"><i data-lucide="line-chart"></i></div>
-          <h3>Growth Plan</h3>
-          <p>Build long-term wealth with structured investing.</p>
-          <button>Invest Now</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROFILE PAGE -->
-    <section class="page hidden" id="profilePage">
-      <div class="page-header">
-        <h2>Profile</h2>
-        <p>Manage your account, wallet, and preferences.</p>
-      </div>
-
-      <div class="profile-card">
-        <img src="https://i.pravatar.cc/90?img=12" alt="profile" />
-        <h3>@Jemella</h3>
-        <p>VaultWise User</p>
-
-        <div class="profile-info">
-          <div>
-            <span>Email</span>
-            <strong>jemella@example.com</strong>
           </div>
 
-          <div>
-            <span>Wallet</span>
-            <strong id="profileWalletText">Not connected</strong>
+          <div class="asset" data-coin="ethereum">
+            <div class="coin eth">◆</div>
+            <div>
+              <h3>ETH</h3>
+              <p><span class="coin-price">Loading...</span> <span class="coin-change"></span></p>
+            </div>
+            <div class="asset-price">
+              <h4 class="coin-balance">0.50 ETH</h4>
+              <p class="coin-value">Loading...</p>
+            </div>
           </div>
 
-          <div>
-            <span>Status</span>
-            <strong class="verified">Verified</strong>
+          <div class="asset" data-coin="cosmos">
+            <div class="coin atom">✺</div>
+            <div>
+              <h3>ATOM</h3>
+              <p><span class="coin-price">Loading...</span> <span class="coin-change"></span></p>
+            </div>
+            <div class="asset-price">
+              <h4 class="coin-balance">20 ATOM</h4>
+              <p class="coin-value">Loading...</p>
+            </div>
+          </div>
+
+          <div class="asset" data-coin="the-open-network">
+            <div class="coin ton">▽</div>
+            <div>
+              <h3>TON</h3>
+              <p><span class="coin-price">Loading...</span> <span class="coin-change"></span></p>
+            </div>
+            <div class="asset-price">
+              <h4 class="coin-balance">40 TON</h4>
+              <p class="coin-value">Loading...</p>
+            </div>
+          </div>
+
+          <div class="asset" data-coin="axelar">
+            <div class="coin axl">✖</div>
+            <div>
+              <h3>AXL</h3>
+              <p><span class="coin-price">Loading...</span> <span class="coin-change"></span></p>
+            </div>
+            <div class="asset-price">
+              <h4 class="coin-balance">100 AXL</h4>
+              <p class="coin-value">Loading...</p>
+            </div>
+          </div>
+
+          <div class="asset" data-coin="bitcoin">
+            <div class="coin btc">₿</div>
+            <div>
+              <h3>BTC</h3>
+              <p><span class="coin-price">Loading...</span> <span class="coin-change"></span></p>
+            </div>
+            <div class="asset-price">
+              <h4 class="coin-balance">0.02 BTC</h4>
+              <p class="coin-value">Loading...</p>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="page hidden" id="savePage">
+        <div class="page-header">
+          <h2>Save</h2>
+          <p>Create savings vaults and track your goals.</p>
+        </div>
+
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="feature-icon"><i data-lucide="wallet"></i></div>
+            <h3>Flexible Savings</h3>
+            <p>Save anytime and withdraw whenever you need access.</p>
+            <button id="openCreateVaultModal">Create Vault</button>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon"><i data-lucide="lock-keyhole"></i></div>
+            <h3>Locked Savings</h3>
+            <p>Lock funds for a fixed period and stay disciplined.</p>
+            <button>Start Saving</button>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon"><i data-lucide="target"></i></div>
+            <h3>Target Savings</h3>
+            <p>Set a goal and watch your progress grow.</p>
+            <button>Set Goal</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="page hidden" id="investPage">
+        <div class="page-header">
+          <h2>Invest</h2>
+          <p>Explore simple investment opportunities.</p>
+        </div>
+
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="feature-icon"><i data-lucide="coins"></i></div>
+            <h3>Crypto Portfolio</h3>
+            <p>Track your crypto assets in one clean dashboard.</p>
+            <button>View Assets</button>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon"><i data-lucide="shield-check"></i></div>
+            <h3>Stable Yield</h3>
+            <p>Earn from low-risk stablecoin opportunities.</p>
+            <button>Explore</button>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon"><i data-lucide="line-chart"></i></div>
+            <h3>Growth Plan</h3>
+            <p>Build long-term wealth with structured investing.</p>
+            <button>Invest Now</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="page hidden" id="profilePage">
+        <div class="page-header">
+          <h2>Profile</h2>
+          <p>Manage your account, wallet, and preferences.</p>
+        </div>
+
+        <div class="profile-card">
+          <img class="user-avatar" src="https://ui-avatars.com/api/?name=User&background=ffffff&color=000000" alt="profile" />
+          <h3 class="profile-username">@User</h3>
+          <p>VaultWise User</p>
+
+          <div class="profile-info">
+            <div>
+              <span>Email</span>
+              <strong>Not added</strong>
+            </div>
+
+            <div>
+              <span>Wallet</span>
+              <strong id="profileWalletText">Not connected</strong>
+            </div>
+
+            <div>
+              <span>Status</span>
+              <strong class="verified">Verified</strong>
+            </div>
+          </div>
+
+          <button>Edit Profile</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <nav class="mobile-bottom-nav">
+    <a class="nav-link active" data-page="home">
+      <i data-lucide="home"></i>
+      <span>Home</span>
+    </a>
+
+    <a class="nav-link" data-page="save">
+      <i data-lucide="badge-dollar-sign"></i>
+      <span>Save</span>
+    </a>
+
+    <a class="nav-link" data-page="invest">
+      <i data-lucide="bar-chart-3"></i>
+      <span>Invest</span>
+    </a>
+
+    <a class="nav-link" data-page="profile">
+      <i data-lucide="user"></i>
+      <span>Profile</span>
+    </a>
+  </nav>
+
+  <div class="modal-overlay hidden" id="createVaultModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2>Create Vault</h2>
+        <button id="closeCreateVaultModal" type="button">×</button>
+      </div>
+
+      <label>Vault Name</label>
+      <input type="text" id="vaultNameInput" placeholder="e.g Land, School Fees" />
+
+      <label>Goal Amount ($)</label>
+      <input type="number" id="goalAmountInput" placeholder="e.g 1000" />
+
+      <label>Current Amount ($)</label>
+      <input type="number" id="currentAmountInput" placeholder="e.g 200" />
+
+      <label>Duration</label>
+      <input type="text" id="durationInput" placeholder="e.g 6 months left" />
+
+      <button class="modal-action-btn" id="createVaultBtn">
+        Create Vault
+      </button>
+    </div>
+  </div>
+
+  <div class="modal-overlay hidden" id="usernameModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2>Welcome 👋</h2>
+      </div>
+
+      <p class="setup-text">Connect your wallet and set up your profile.</p>
+
+      <button id="modalConnectWalletBtn" class="modal-action-btn">
+        Connect Wallet
+      </button>
+
+      <p id="modalWalletText" class="setup-text">Wallet not connected</p>
+
+      <label>Username</label>
+      <input type="text" id="usernameInput" placeholder="e.g Kehinde" />
+
+      <label>Avatar Upload Optional</label>
+      <input type="file" id="avatarInput" accept="image/*" />
+
+      <button id="saveUsernameBtn" class="modal-action-btn">
+        Continue
+      </button>
+    </div>
+  </div>
+
+  <div class="transfer-overlay hidden" id="transferOverlay">
+    <div class="transfer-panel">
+      <div class="transfer-header">
+        <button id="transferBackBtn" class="transfer-icon-btn">
+          <i data-lucide="arrow-left"></i>
+        </button>
+
+        <h2 id="transferTitle">Send</h2>
+
+        <button id="transferCloseBtn" class="transfer-icon-btn">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+
+      <div class="token-select-screen" id="tokenSelectScreen">
+        <div class="transfer-search">
+          <i data-lucide="search"></i>
+          <input type="text" id="tokenSearchInput" placeholder="Search" />
+        </div>
+
+        <div class="transfer-token-list" id="transferTokenList"></div>
+
+        <div class="transfer-empty hidden" id="transferEmptyState">
+          <div class="empty-illustration">
+            <i data-lucide="scan-search"></i>
+          </div>
+          <p>No tokens available</p>
+        </div>
+      </div>
+
+      <div class="send-form-screen hidden" id="sendFormScreen">
+        <div class="selected-token-card" id="sendSelectedToken"></div>
+
+        <label>Wallet Address</label>
+        <input type="text" id="sendAddressInput" placeholder="Enter wallet address" />
+
+        <label>Amount</label>
+        <input type="number" id="sendAmountInput" placeholder="Token Amount" />
+
+        <button id="sendNextBtn" class="transfer-primary-btn" disabled>
+          Next
+        </button>
+      </div>
+
+      <div class="receive-screen hidden" id="receiveScreen">
+        <div class="selected-token-card" id="receiveSelectedToken"></div>
+
+        <div class="qr-box">
+          <div class="qr-pattern">
+            <span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span>
           </div>
         </div>
 
-        <button>Edit Profile</button>
-      </div>
-    </section>
+        <p class="receive-label">Your Wallet Address</p>
 
-  </main>
+        <div class="receive-address-box">
+          <span id="receiveAddressText">Connect wallet first</span>
+          <button id="copyReceiveAddressBtn">
+            <i data-lucide="copy"></i>
+          </button>
+        </div>
+
+        <p class="receive-note">
+          Only send the selected token on the supported network. Sending other assets may result in loss of funds.
+        </p>
+      </div>
+    </div>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/ethers@6.13.2/dist/ethers.umd.min.js"></script>
   <script src="app.js"></script>
-  <nav class="mobile-bottom-nav">
-  <a class="nav-link active" data-page="home">
-    <i data-lucide="home"></i>
-    <span>Home</span>
-  </a>
-
-  <a class="nav-link" data-page="save">
-    <i data-lucide="badge-dollar-sign"></i>
-    <span>Save</span>
-  </a>
-
-  <a class="nav-link" data-page="invest">
-    <i data-lucide="bar-chart-3"></i>
-    <span>Invest</span>
-  </a>
-
-  <a class="nav-link" data-page="profile">
-    <i data-lucide="user"></i>
-    <span>Profile</span>
-  </a>
-</nav>
 </body>
 </html>
