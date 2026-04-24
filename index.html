@@ -33,6 +33,28 @@
 
   <button id="connectWalletBtnDesktop">Connect Wallet</button>
 
+  <div class="wallet-box hidden" id="walletBox">
+    <button class="wallet-display" id="walletDisplayBtn">
+      <span class="green-dot"></span>
+      <span id="walletShortText">Connected</span>
+      <i data-lucide="chevron-down"></i>
+    </button>
+
+    <div class="wallet-dropdown hidden" id="walletDropdown">
+      <p class="connected-badge">Connected</p>
+
+      <button id="copyWalletBtn">
+        <i data-lucide="copy"></i>
+        Copy Address
+      </button>
+
+      <button id="disconnectWalletBtn" class="danger">
+        <i data-lucide="log-out"></i>
+        Disconnect
+      </button>
+    </div>
+  </div>
+
   <div class="top-icons">
     <i data-lucide="search"></i>
 
@@ -243,83 +265,83 @@
       </div>
 
       <aside class="assets-card">
-        <div class="section-title">
-          <h2>Crypto Assets</h2>
-          <a>View all</a>
-        </div>
+  <div class="section-title">
+    <h2>Crypto Assets</h2>
+    <a>View all</a>
+  </div>
 
-        <div class="asset">
-          <div class="coin usdt">₮</div>
-          <div>
-            <h3>USDT</h3>
-            <p>$1.00 <span>+4.56%</span></p>
-          </div>
-          <div class="asset-price">
-            <h4>$1,320.7043</h4>
-            <p>$1,320.70</p>
-          </div>
-        </div>
+  <div class="asset" data-coin="tether">
+    <div class="coin usdt">₮</div>
+    <div>
+      <h3>USDT</h3>
+      <p><span class="coin-price">Loading...</span> <span class="coin-change"></span></p>
+    </div>
+    <div class="asset-price">
+      <h4 class="coin-balance">$1,320.7043</h4>
+      <p class="coin-value">$1,320.70</p>
+    </div>
+  </div>
 
-        <div class="asset">
-          <div class="coin eth">◆</div>
-          <div>
-            <h3>ETH</h3>
-            <p>$1.00 <span>+4.56%</span></p>
-          </div>
-          <div class="asset-price">
-            <h4>$1,320.7043</h4>
-            <p>$1,320.70</p>
-          </div>
-        </div>
+  <div class="asset" data-coin="ethereum">
+    <div class="coin eth">◆</div>
+    <div>
+      <h3>ETH</h3>
+      <p><span class="coin-price">Loading...</span> <span class="coin-change"></span></p>
+    </div>
+    <div class="asset-price">
+      <h4 class="coin-balance">0.50 ETH</h4>
+      <p class="coin-value">Loading...</p>
+    </div>
+  </div>
 
-        <div class="asset">
-          <div class="coin atom">✺</div>
-          <div>
-            <h3>ATOM</h3>
-            <p>$1.00 <span>+4.56%</span></p>
-          </div>
-          <div class="asset-price">
-            <h4>$1,320.7043</h4>
-            <p>$1,320.70</p>
-          </div>
-        </div>
+  <div class="asset" data-coin="cosmos">
+    <div class="coin atom">✺</div>
+    <div>
+      <h3>ATOM</h3>
+      <p><span class="coin-price">Loading...</span> <span class="coin-change"></span></p>
+    </div>
+    <div class="asset-price">
+      <h4 class="coin-balance">20 ATOM</h4>
+      <p class="coin-value">Loading...</p>
+    </div>
+  </div>
 
-        <div class="asset">
-          <div class="coin ton">▽</div>
-          <div>
-            <h3>TON</h3>
-            <p>$1.00 <span>+4.56%</span></p>
-          </div>
-          <div class="asset-price">
-            <h4>$1,320.7043</h4>
-            <p>$1,320.70</p>
-          </div>
-        </div>
+  <div class="asset" data-coin="the-open-network">
+    <div class="coin ton">▽</div>
+    <div>
+      <h3>TON</h3>
+      <p><span class="coin-price">Loading...</span> <span class="coin-change"></span></p>
+    </div>
+    <div class="asset-price">
+      <h4 class="coin-balance">40 TON</h4>
+      <p class="coin-value">Loading...</p>
+    </div>
+  </div>
 
-        <div class="asset">
-          <div class="coin axl">✖</div>
-          <div>
-            <h3>AXL</h3>
-            <p>$1.00 <span>+4.56%</span></p>
-          </div>
-          <div class="asset-price">
-            <h4>$1,320.7043</h4>
-            <p>$1,320.70</p>
-          </div>
-        </div>
+  <div class="asset" data-coin="axelar">
+    <div class="coin axl">✖</div>
+    <div>
+      <h3>AXL</h3>
+      <p><span class="coin-price">Loading...</span> <span class="coin-change"></span></p>
+    </div>
+    <div class="asset-price">
+      <h4 class="coin-balance">100 AXL</h4>
+      <p class="coin-value">Loading...</p>
+    </div>
+  </div>
 
-        <div class="asset">
-          <div class="coin btc">₿</div>
-          <div>
-            <h3>BTC</h3>
-            <p>$1.00 <span>+4.56%</span></p>
-          </div>
-          <div class="asset-price">
-            <h4>$1,320.7043</h4>
-            <p>$1,320.70</p>
-          </div>
-        </div>
-      </aside>
+  <div class="asset" data-coin="bitcoin">
+    <div class="coin btc">₿</div>
+    <div>
+      <h3>BTC</h3>
+      <p><span class="coin-price">Loading...</span> <span class="coin-change"></span></p>
+    </div>
+    <div class="asset-price">
+      <h4 class="coin-balance">0.02 BTC</h4>
+      <p class="coin-value">Loading...</p>
+    </div>
+  </div>
+</aside>
     </section>
 
     <!-- SAVE PAGE -->
@@ -419,6 +441,7 @@
 
   </main>
 
+  <script src="https://cdn.jsdelivr.net/npm/ethers@6.13.2/dist/ethers.umd.min.js"></script>
   <script src="app.js"></script>
   <nav class="mobile-bottom-nav">
   <a class="nav-link active" data-page="home">
